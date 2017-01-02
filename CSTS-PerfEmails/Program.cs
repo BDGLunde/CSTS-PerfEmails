@@ -106,6 +106,11 @@ namespace CSTS_PerfEmails
 
         #region QUERY METHODS
 
+        /* You'll notice that some of these methods create a connection within the method, and others simply take an open
+         * connection as a parameter. I wasn't sure which technique is considered best practice, and I'm sure both are 
+         * the optimal strategy for different purposes/goals.
+         */
+            
         /// <summary>
         /// Generates a dictionary of <CSTS.sAMAccountName, CSTS> entries
         /// </summary>
@@ -232,18 +237,6 @@ namespace CSTS_PerfEmails
                     {
                         csts.OpenCRTEs++;
                     }
-
-                    //if (newEntry != null && newEntry.CRTEStatus != "60") //Repeated outside while loop to add the very last CRTE
-                    //{
-                    //    csts.SLGs.Add(newEntry);
-                    //    csts.CRTEs.Add(newEntry);
-
-                    //    if (newEntry.CRTEStatus == "30" || newEntry.CRTEStatus == "20")
-                    //    {
-                    //        csts.OpenCRTEs++;
-                    //    }
-                    //}
-
                 }
             }
             Console.WriteLine("Writing for {0} finished.", csts.sAMAccountName);
