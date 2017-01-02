@@ -9,4 +9,7 @@ used to build the report.
 
 The original DBConnection strings and some table names were changed from what is seen in this commit. 
 
+Since I no longer work for Epic Systems, I don't anticipate ever coming back to this project even though it could probably use
+some touching up since I first finished it (about a year ago).
+
 
